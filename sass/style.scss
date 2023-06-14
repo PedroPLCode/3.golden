@@ -42,7 +42,10 @@ section {
 
 .splash {
     height: 100vh;
-    background-color: $color-four;
+    background-image: url("https://i.postimg.cc/NG93kGMr/background-splash.png");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; 
     display: flex;
     flex-direction: column;
 
@@ -64,6 +67,12 @@ section {
         h5 {
             color: $color-three;
             font-size: 24px;
+            transition: $transition;
+        }
+
+        h5:hover {
+            transform: scale(1.2) rotate(5deg);
+            cursor: pointer;
         }
     
         ul {
@@ -75,10 +84,16 @@ section {
             gap: 28px;
     
             li {
+                transition: $transition;
     
                 a {
                     text-decoration: none;
                 }
+            }
+
+            li:hover {
+                transform: scale(1.2) rotate(5deg);
+                cursor: pointer;
             }
         }
 
@@ -177,6 +192,7 @@ section {
 
                 i:hover {
                     transform: scale(1.2) rotate(360deg);
+                    cursor: pointer;
             }
 
             }
@@ -227,15 +243,30 @@ section {
                 margin-bottom: 32px;
 
                 .image {
+                    width: 100%;
+                    height: 75%;
+                    transition: $transition;
 
                     img {
-                        height: 100%;
                         width: 100%;
+                        height: 100%;
                     }
                 
                 }
 
+                .image:hover {
+                    filter: brightness(25%);
+                    cursor: pointer;
+                }
+
+                .image:hover ~ .description {
+                    transform: scale(1.2);
+                }
+
                 .description {
+                    width: 100%;
+                    height: 25%;
+                    transition: $transition;
 
                     h2 {
 
@@ -260,39 +291,63 @@ section {
     .container {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
 
-        h5 {
-            color: $color-two;
-        }
-
-        ul {
-            list-style: none;
+        .boxes-wrapper {
+            width: 100%;
             display: flex;
-            flex-direction: row;
-            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
-            li {
+            .single-box-one {
+                flex: 0 0 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-                a {
-                    font-size: 0px;
-
-                    i {
-                        background-color: $color-two;
-                        color: $color-one;
-                        font-size: 20px;
-                        height: 40px;
-                        width: 40px;
-                        border-radius: 50%;
-                        transition: $transition;
-                    }
-    
-                    i:hover {
-                        transform: scale(1.2) rotate(360deg);
-                    }
+                h5 {
+                    color: $color-two;
                 }
             }
+    
+            .single-box-two {
+                flex: 0 0 60%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+        
+                    li {
+        
+                        a {
+                            font-size: 0px;
+        
+                            i {
+                                background-color: $color-two;
+                                color: $color-one;
+                                font-size: 20px;
+                                height: 40px;
+                                width: 40px;
+                                border-radius: 50%;
+                                transition: $transition;
+                            }
+            
+                            i:hover {
+                                transform: scale(1.2);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+
         }
     }
 }
