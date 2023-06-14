@@ -1,0 +1,254 @@
+/* Variables */
+
+/* Colors */
+
+$color-one: white;
+$color-two: black;
+$color-three: gold;
+$color-four: lightgrey;
+
+/* Fonts */
+
+/* Other */
+$transition: all 1s;
+
+/* Styles */
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-three;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+section {
+    padding: 96px 0;
+}
+
+/* Navigation */
+
+.navigation {
+    width: 100%;
+    background-color: $color-four;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        h5 {
+            color: $color-three;
+            font-size: 24px;
+        }
+    
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 28px;
+    
+            li {
+    
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
+
+/* Splash */
+
+.splash {
+    display: flex;
+
+    .splash-inner {
+        width: 100%;
+        color: $color-four;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+
+        }
+
+        h2 {
+
+        }
+
+        a {
+            display: inline-block;
+            min-width: 160px;
+            margin: 24px auto 0 auto;
+            padding: 16px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-width: 2px;
+            border-style: solid;
+            background-color: inherit;
+            background-position: 100% 0;
+            background-size: 300%;
+            border-color: $color-three;
+            color: $color-three;
+            background-image: -webkit-linear-gradient(90deg, $color-three 50%, transparent 50%);
+            background-image: -moz-linear-gradient(90deg, $color-three 50%, transparent 50%);
+            background-image: -o-linear-gradient(90deg, $color-three 50%, transparent 50%);
+            background-image: linear-gradient(90deg, $color-three 50%, transparent 50%);
+            transition: $transition;
+        }
+
+        a:hover {
+            background-position: 0 100%;
+            color: $color-one;
+        }
+    }
+}
+
+/* Services */
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+
+    .boxes-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .single-box {
+            flex: 0 0 20%;
+            display: block;
+
+            a {
+                font-size: 0px;
+                display: block;
+                text-align: center;
+                border: 2px solid red;
+
+                i {
+                    background-color: $color-one;
+                    border: 3px solid $color-three;
+                    color: $color-three;
+                    font-size: 40px;
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 50%;
+                    transition: $transition;
+                }
+
+                i:hover {
+                    transform: scale(1.2) rotate(360deg);
+            }
+
+            }
+
+            h2 {
+                text-align: center;
+
+            }
+
+            p {
+                text-align: center;
+
+            }
+        }
+    }
+}
+
+/* Our Portfolio */
+
+.our-portfolio {
+    background-color: $color-four;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+
+        h2 {
+            text-align: center;
+        }
+    
+        p {
+            text-align: center;
+        }
+
+        .boxes-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .our-portfolio-single-box {
+                background-color: $color-one;
+                flex: 0 0 30%;
+                width: 25%;
+                margin-bottom: 32px;
+
+                .image {
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                
+                }
+
+                .description {
+
+                    h2 {
+
+                    }
+
+                    p {
+
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}
+
+/* Footer */
