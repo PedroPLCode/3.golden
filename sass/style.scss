@@ -87,6 +87,7 @@ section {
                 transition: $transition;
     
                 a {
+                    color: $color-one;
                     text-decoration: none;
                 }
             }
@@ -108,11 +109,11 @@ section {
         align-items: center;
 
         h1 {
-
+            color: $color-one;
         }
 
         h2 {
-
+            color: $color-one;
         }
 
         a {
@@ -149,6 +150,7 @@ section {
 /* Services */
 
 .our-services {
+    color: $color-two;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,7 +179,11 @@ section {
                 font-size: 0px;
                 display: block;
                 text-align: center;
-                border: 2px solid red;
+                object-fit: cover; 
+                position: center;  
+                display: flex;
+                justify-content: center;
+                align-items: top;
 
                 i {
                     background-color: $color-one;
@@ -187,6 +193,9 @@ section {
                     height: 80px;
                     width: 80px;
                     border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     transition: $transition;
                 }
 
@@ -213,6 +222,7 @@ section {
 /* Our Portfolio */
 
 .our-portfolio {
+    color: $color-two;
     background-color: $color-four;
     display: flex;
     flex-direction: column;
@@ -287,67 +297,59 @@ section {
 /* Footer */
 
 .page-footer {
+    padding: 32px 0;
 
     .container {
+        width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .boxes-wrapper {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
-            .single-box-one {
-                flex: 0 0 40%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                h5 {
-                    color: $color-two;
-                }
+            h5 {
+                width: 100%;
+                color: $color-two;
+                transform: translateY(32px);
             }
-    
-            .single-box-two {
-                flex: 0 0 60%;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
 
-                ul {
-                    list-style: none;
-                    display: flex;
-                    flex-direction: row;
-                    gap: 10px;
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
         
-                    li {
+                li {
         
-                        a {
-                            font-size: 0px;
+                    a {
+                        font-size: 0px;
+                        object-fit: cover; 
+                        position: center;  
+                        display: flex;
+                        justify-content: center;
+                        align-items: top;
         
-                            i {
-                                background-color: $color-two;
-                                color: $color-one;
-                                font-size: 20px;
-                                height: 40px;
-                                width: 40px;
-                                border-radius: 50%;
-                                transition: $transition;
-                            }
-            
-                            i:hover {
-                                transform: scale(1.2);
-                                cursor: pointer;
-                            }
+                        i {
+                            background-color: $color-two;
+                            color: $color-one;
+                            font-size: 30px;
+                            height: 60px;
+                            width: 60px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: $transition;
+                        }
+        
+                        i:hover {
+                            transform: scale(1.2);                                
+                            opacity: 0.5;
+                            cursor: pointer;
                         }
                     }
                 }
-
             }
-
         }
     }
-}
+
