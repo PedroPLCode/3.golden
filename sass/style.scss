@@ -286,6 +286,7 @@ section {
                 flex: 0 0 30%;
                 width: 30%;
                 margin-bottom: 32px;
+                list-style-type: none;
 
                 .image {
                     width: 100%;
@@ -346,7 +347,7 @@ section {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 5%;
 
@@ -361,11 +362,12 @@ section {
                 list-style: none;
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: center;
+                padding: 0;
                 gap: 10px;
         
                 li {
-        
+
                     a {
                         font-size: 0px;
                         text-decoration: none;
@@ -399,3 +401,123 @@ section {
         }
     }
 
+/* Media */
+
+@media (min-width: 320px) and (max-width: 991px) {
+
+/* Navigation inside Splash RWD */
+
+.splash .navigation .container h5 {
+    font-size: 46px;
+}
+
+.splash .navigation .container ul {
+    gap: 8px;
+}
+
+.splash .navigation .container ul li a {
+    font-size: 12px;
+}
+
+/* Splash inner RWD */
+
+.splash .splash-inner h1 {
+    font-size: 24px;
+}
+
+.splash .splash-inner h2 {
+    font-size: 32px;
+}
+
+.splash .splash-inner a {
+    margin-top: 6px;
+}
+
+/* Our Services RWD */
+
+.our-services {
+    padding: 60px 24px;
+}
+
+.our-services .container h2 {
+    font-size: 32px;
+}
+
+.our-services .boxes-wrapper {
+    padding: 0;
+    margin-top: 48px;
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.our-services .boxes-wrapper .single-box {
+    height: 300px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 0;
+    display: block;
+    background-color: $color-one;
+    margin-bottom: 0;
+}
+
+/* Our Portfolio RWD */ 
+
+.our-portfolio {
+    padding: 60px 24px;
+}
+
+.our-portfolio .container h2 {
+    font-size: 32px;
+}
+
+.our-portfolio .container .boxes-wrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    gap: 24px;
+}
+
+.our-portfolio .container .boxes-wrapper .our-portfolio-single-box {
+    width: 100%;
+}
+
+/* Footer RWD */
+
+.page-footer {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.page-footer .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+}
+
+.page-footer .container h5 {
+    width: 100%;
+    color: $color-five;
+    text-align: center;
+    margin: 6px 0;
+}
+
+.page-footer .container ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 6px 0;
+}
+    
+}
