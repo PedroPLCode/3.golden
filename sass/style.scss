@@ -5,9 +5,14 @@
 $color-one: white;
 $color-two: black;
 $color-three: gold;
-$color-four: lightgrey;
+$color-four: rgb(240, 240, 240);
+$color-five: darkgrey;
 
 /* Fonts */
+
+$font-one: 'Geologica', sans-serif;
+$font-two: 'Merriweather', serif;
+$font-three: 'Qwitcher Grypen', cursive;
 
 /* Other */
 $transition: all 1s;
@@ -21,6 +26,7 @@ $transition: all 1s;
 }
 
 body {
+    font-family: $font-one;
     margin: 0;
     font-size: 16px;
     line-height: 1.7;
@@ -42,14 +48,15 @@ section {
 
 .splash {
     height: 100vh;
-    background-image: url("/images/back.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255,255,255,0)), url("/images/back.png");
     background-position: center center;
     background-size: cover;
     background-attachment: fixed; 
     display: flex;
+    gap: 30%;
     flex-direction: column;
 
-    /* Navigation inside Splash */
+/* Navigation inside Splash */
 
 .navigation {
     width: 100%;
@@ -59,14 +66,17 @@ section {
 
     .container {
         width: 100%;
+        height: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        padding-top: 32px;
 
         h5 {
+            font-family: $font-three;
             color: $color-three;
-            font-size: 24px;
+            font-size: 48px;
             transition: $transition;
         }
 
@@ -81,7 +91,7 @@ section {
             list-style-type: none;
             display: flex;
             flex-direction: row;
-            gap: 28px;
+            gap: 38px;
     
             li {
                 transition: $transition;
@@ -110,19 +120,24 @@ section {
 
         h1 {
             color: $color-one;
+            font-family: $font-two;
+            font-style: italic;
+            margin: 0;
         }
 
         h2 {
             color: $color-one;
+            font-size: 72px;
+            margin: 0;
         }
 
         a {
             display: inline-block;
-            min-width: 160px;
+            min-width: 250px;
             margin: 24px auto 0 auto;
-            padding: 16px;
+            padding: 20px;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 20px;
             text-align: center;
             text-decoration: none;
             cursor: pointer;
@@ -158,21 +173,29 @@ section {
 
     h2 {
         text-align: center;
+        font-size: 48px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     p {
         text-align: center;
+        font-family: $font-two;
+        font-style: italic;
+        margin-top: 0;
+        color: $color-five;
     }
 
 
     .boxes-wrapper {
+        padding-top: 56px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
         .single-box {
-            flex: 0 0 20%;
+            flex: 0 0 30%;
             display: block;
 
             a {
@@ -208,12 +231,14 @@ section {
 
             h2 {
                 text-align: center;
-
+                font-size: 16px;
+                margin-top: 12px;
+                margin-bottom: 12px;
             }
 
             p {
                 text-align: center;
-
+                color: $color-five;
             }
         }
     }
@@ -233,10 +258,18 @@ section {
 
         h2 {
             text-align: center;
+            font-size: 48px;
+            margin-top: 0;
+            margin-bottom: 0;
         }
     
         p {
             text-align: center;
+            font-family: $font-two;
+            font-style: italic;
+            margin-top: 0;
+            margin-bottom: 72px;
+            color: $color-five;
         }
 
         .boxes-wrapper {
@@ -278,14 +311,22 @@ section {
                 .description {
                     width: 100%;
                     height: 25%;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    justify-content: center;
                     transition: $transition;
 
                     h2 {
-
+                        font-size: 18px;
+                        padding: 0;
+                        margin: 0;
                     }
 
                     p {
-
+                        font-size: 16px;
+                        padding: 0;
+                        margin: 0;
                     }
 
                 }
@@ -311,7 +352,7 @@ section {
 
             h5 {
                 width: 30%;
-                color: $color-two;
+                color: $color-five;
                 text-align: center;
             }
 
