@@ -42,7 +42,7 @@ section {
 
 .splash {
     height: 100vh;
-    background-image: url("https://i.postimg.cc/NG93kGMr/background-splash.png");
+    background-image: url("/images/back.png");
     background-position: center center;
     background-size: cover;
     background-attachment: fixed; 
@@ -240,16 +240,18 @@ section {
         }
 
         .boxes-wrapper {
+            padding: 0;
             width: 100%;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+            gap: 5%;
 
             .our-portfolio-single-box {
                 background-color: $color-one;
                 flex: 0 0 30%;
-                width: 25%;
+                width: 30%;
                 margin-bottom: 32px;
 
                 .image {
@@ -302,27 +304,30 @@ section {
     .container {
         width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        gap: 5%;
 
             h5 {
-                width: 100%;
+                width: 30%;
                 color: $color-two;
-                transform: translateY(32px);
+                text-align: center;
             }
 
             ul {
+                width: 30%;
                 list-style: none;
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
+                justify-content: flex-start;
                 gap: 10px;
         
                 li {
         
                     a {
                         font-size: 0px;
+                        text-decoration: none;
                         object-fit: cover; 
                         position: center;  
                         display: flex;
@@ -344,7 +349,7 @@ section {
         
                         i:hover {
                             transform: scale(1.2);                                
-                            opacity: 0.5;
+                            color: $color-three;
                             cursor: pointer;
                         }
                     }
